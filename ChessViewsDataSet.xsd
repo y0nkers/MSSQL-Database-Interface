@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ChessViewsDataSet" targetNamespace="http://tempuri.org/ChessViewsDataSet.xsd" xmlns:mstns="http://tempuri.org/ChessViewsDataSet.xsd" xmlns="http://tempuri.org/ChessViewsDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ChessConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ChessConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.CourseWork.Properties.Settings.GlobalReference.Default.ChessConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ChessPlayerViewTableAdapter" GeneratorDataComponentClassName="ChessPlayerViewTableAdapter" Name="ChessPlayerView" UserDataComponentName="ChessPlayerViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ChessConnectionString (Settings)" DbObjectName="Chess.dbo.ChessPlayerView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT LastName, FirstName, MiddleName, Country, BirthDate, Rank, DebuteDate, ActualRatingELO, MaximumRatingELO, WhiteMatches, BlackMatches FROM dbo.ChessPlayerView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
+              <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
+              <Mapping SourceColumn="MiddleName" DataSetColumn="MiddleName" />
+              <Mapping SourceColumn="Country" DataSetColumn="Country" />
+              <Mapping SourceColumn="BirthDate" DataSetColumn="BirthDate" />
+              <Mapping SourceColumn="Rank" DataSetColumn="Rank" />
+              <Mapping SourceColumn="DebuteDate" DataSetColumn="DebuteDate" />
+              <Mapping SourceColumn="ActualRatingELO" DataSetColumn="ActualRatingELO" />
+              <Mapping SourceColumn="MaximumRatingELO" DataSetColumn="MaximumRatingELO" />
+              <Mapping SourceColumn="WhiteMatches" DataSetColumn="WhiteMatches" />
+              <Mapping SourceColumn="BlackMatches" DataSetColumn="BlackMatches" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="MatchesViewTableAdapter" GeneratorDataComponentClassName="MatchesViewTableAdapter" Name="MatchesView" UserDataComponentName="MatchesViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ChessConnectionString (Settings)" DbObjectName="Chess.dbo.MatchesView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Title, ChessPlayer1, ChessPlayer2, Winner FROM dbo.MatchesView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="ChessPlayer1" DataSetColumn="ChessPlayer1" />
+              <Mapping SourceColumn="ChessPlayer2" DataSetColumn="ChessPlayer2" />
+              <Mapping SourceColumn="Winner" DataSetColumn="Winner" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TournamentResultsViewTableAdapter" GeneratorDataComponentClassName="TournamentResultsViewTableAdapter" Name="TournamentResultsView" UserDataComponentName="TournamentResultsViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ChessConnectionString (Settings)" DbObjectName="Chess.dbo.TournamentResultsView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Place, Title, Player FROM dbo.TournamentResultsView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Place" DataSetColumn="Place" />
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="Player" DataSetColumn="Player" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TournamentViewTableAdapter" GeneratorDataComponentClassName="TournamentViewTableAdapter" Name="TournamentView" UserDataComponentName="TournamentViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ChessConnectionString (Settings)" DbObjectName="Chess.dbo.TournamentView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Title, Date, Format, Category, PlayersQuantity FROM dbo.TournamentView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Title" DataSetColumn="Title" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Format" DataSetColumn="Format" />
+              <Mapping SourceColumn="Category" DataSetColumn="Category" />
+              <Mapping SourceColumn="PlayersQuantity" DataSetColumn="PlayersQuantity" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ChessViewsDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ChessViewsDataSet" msprop:Generator_UserDSName="ChessViewsDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ChessPlayerView" msprop:Generator_TableClassName="ChessPlayerViewDataTable" msprop:Generator_TableVarName="tableChessPlayerView" msprop:Generator_RowChangedName="ChessPlayerViewRowChanged" msprop:Generator_TablePropName="ChessPlayerView" msprop:Generator_RowDeletingName="ChessPlayerViewRowDeleting" msprop:Generator_RowChangingName="ChessPlayerViewRowChanging" msprop:Generator_RowEvHandlerName="ChessPlayerViewRowChangeEventHandler" msprop:Generator_RowDeletedName="ChessPlayerViewRowDeleted" msprop:Generator_RowClassName="ChessPlayerViewRow" msprop:Generator_UserTableName="ChessPlayerView" msprop:Generator_RowEvArgName="ChessPlayerViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LastName" msprop:Generator_ColumnVarNameInTable="columnLastName" msprop:Generator_ColumnPropNameInRow="LastName" msprop:Generator_ColumnPropNameInTable="LastNameColumn" msprop:Generator_UserColumnName="LastName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MiddleName" msprop:Generator_ColumnVarNameInTable="columnMiddleName" msprop:Generator_ColumnPropNameInRow="MiddleName" msprop:Generator_ColumnPropNameInTable="MiddleNameColumn" msprop:Generator_UserColumnName="MiddleName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" msprop:Generator_UserColumnName="Country">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="BirthDate" msprop:Generator_ColumnVarNameInTable="columnBirthDate" msprop:Generator_ColumnPropNameInRow="BirthDate" msprop:Generator_ColumnPropNameInTable="BirthDateColumn" msprop:Generator_UserColumnName="BirthDate" type="xs:dateTime" />
+              <xs:element name="Rank" msprop:Generator_ColumnVarNameInTable="columnRank" msprop:Generator_ColumnPropNameInRow="Rank" msprop:Generator_ColumnPropNameInTable="RankColumn" msprop:Generator_UserColumnName="Rank">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DebuteDate" msprop:Generator_ColumnVarNameInTable="columnDebuteDate" msprop:Generator_ColumnPropNameInRow="DebuteDate" msprop:Generator_ColumnPropNameInTable="DebuteDateColumn" msprop:Generator_UserColumnName="DebuteDate" type="xs:dateTime" />
+              <xs:element name="ActualRatingELO" msprop:Generator_ColumnVarNameInTable="columnActualRatingELO" msprop:Generator_ColumnPropNameInRow="ActualRatingELO" msprop:Generator_ColumnPropNameInTable="ActualRatingELOColumn" msprop:Generator_UserColumnName="ActualRatingELO" type="xs:int" />
+              <xs:element name="MaximumRatingELO" msprop:Generator_ColumnVarNameInTable="columnMaximumRatingELO" msprop:Generator_ColumnPropNameInRow="MaximumRatingELO" msprop:Generator_ColumnPropNameInTable="MaximumRatingELOColumn" msprop:Generator_UserColumnName="MaximumRatingELO" type="xs:int" />
+              <xs:element name="WhiteMatches" msprop:Generator_ColumnVarNameInTable="columnWhiteMatches" msprop:Generator_ColumnPropNameInRow="WhiteMatches" msprop:Generator_ColumnPropNameInTable="WhiteMatchesColumn" msprop:Generator_UserColumnName="WhiteMatches" type="xs:int" />
+              <xs:element name="BlackMatches" msprop:Generator_ColumnVarNameInTable="columnBlackMatches" msprop:Generator_ColumnPropNameInRow="BlackMatches" msprop:Generator_ColumnPropNameInTable="BlackMatchesColumn" msprop:Generator_UserColumnName="BlackMatches" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MatchesView" msprop:Generator_TableClassName="MatchesViewDataTable" msprop:Generator_TableVarName="tableMatchesView" msprop:Generator_RowChangedName="MatchesViewRowChanged" msprop:Generator_TablePropName="MatchesView" msprop:Generator_RowDeletingName="MatchesViewRowDeleting" msprop:Generator_RowChangingName="MatchesViewRowChanging" msprop:Generator_RowEvHandlerName="MatchesViewRowChangeEventHandler" msprop:Generator_RowDeletedName="MatchesViewRowDeleted" msprop:Generator_RowClassName="MatchesViewRow" msprop:Generator_UserTableName="MatchesView" msprop:Generator_RowEvArgName="MatchesViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChessPlayer1" msprop:Generator_ColumnVarNameInTable="columnChessPlayer1" msprop:Generator_ColumnPropNameInRow="ChessPlayer1" msprop:Generator_ColumnPropNameInTable="ChessPlayer1Column" msprop:Generator_UserColumnName="ChessPlayer1">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ChessPlayer2" msprop:Generator_ColumnVarNameInTable="columnChessPlayer2" msprop:Generator_ColumnPropNameInRow="ChessPlayer2" msprop:Generator_ColumnPropNameInTable="ChessPlayer2Column" msprop:Generator_UserColumnName="ChessPlayer2">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Winner" msprop:Generator_ColumnVarNameInTable="columnWinner" msprop:Generator_ColumnPropNameInRow="Winner" msprop:Generator_ColumnPropNameInTable="WinnerColumn" msprop:Generator_UserColumnName="Winner">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TournamentResultsView" msprop:Generator_TableClassName="TournamentResultsViewDataTable" msprop:Generator_TableVarName="tableTournamentResultsView" msprop:Generator_RowChangedName="TournamentResultsViewRowChanged" msprop:Generator_TablePropName="TournamentResultsView" msprop:Generator_RowDeletingName="TournamentResultsViewRowDeleting" msprop:Generator_RowChangingName="TournamentResultsViewRowChanging" msprop:Generator_RowEvHandlerName="TournamentResultsViewRowChangeEventHandler" msprop:Generator_RowDeletedName="TournamentResultsViewRowDeleted" msprop:Generator_RowClassName="TournamentResultsViewRow" msprop:Generator_UserTableName="TournamentResultsView" msprop:Generator_RowEvArgName="TournamentResultsViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Place" msprop:Generator_ColumnVarNameInTable="columnPlace" msprop:Generator_ColumnPropNameInRow="Place" msprop:Generator_ColumnPropNameInTable="PlaceColumn" msprop:Generator_UserColumnName="Place" type="xs:int" />
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Player" msprop:Generator_ColumnVarNameInTable="columnPlayer" msprop:Generator_ColumnPropNameInRow="Player" msprop:Generator_ColumnPropNameInTable="PlayerColumn" msprop:Generator_UserColumnName="Player">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TournamentView" msprop:Generator_TableClassName="TournamentViewDataTable" msprop:Generator_TableVarName="tableTournamentView" msprop:Generator_RowChangedName="TournamentViewRowChanged" msprop:Generator_TablePropName="TournamentView" msprop:Generator_RowDeletingName="TournamentViewRowDeleting" msprop:Generator_RowChangingName="TournamentViewRowChanging" msprop:Generator_RowEvHandlerName="TournamentViewRowChangeEventHandler" msprop:Generator_RowDeletedName="TournamentViewRowDeleted" msprop:Generator_RowClassName="TournamentViewRow" msprop:Generator_UserTableName="TournamentView" msprop:Generator_RowEvArgName="TournamentViewRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnPropNameInTable="TitleColumn" msprop:Generator_UserColumnName="Title">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="Format" msprop:Generator_ColumnVarNameInTable="columnFormat" msprop:Generator_ColumnPropNameInRow="Format" msprop:Generator_ColumnPropNameInTable="FormatColumn" msprop:Generator_UserColumnName="Format">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="32" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" type="xs:int" />
+              <xs:element name="PlayersQuantity" msprop:Generator_ColumnVarNameInTable="columnPlayersQuantity" msprop:Generator_ColumnPropNameInRow="PlayersQuantity" msprop:Generator_ColumnPropNameInTable="PlayersQuantityColumn" msprop:Generator_UserColumnName="PlayersQuantity" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
